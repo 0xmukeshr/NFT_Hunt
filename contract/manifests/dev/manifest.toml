@@ -1,0 +1,247 @@
+[world]
+kind = "WorldContract"
+class_hash = "0x3f63cecdc4964acafb921ba2934c6507d1b3c344edb64c2762cf08053169ab9"
+original_class_hash = "0x3f63cecdc4964acafb921ba2934c6507d1b3c344edb64c2762cf08053169ab9"
+abi = "manifests/dev/abis/deployments/dojo_world_world.json"
+address = "0xb4079627ebab1cd3cf9fd075dda1ad2454a7a448bf659591f259efa2519b18"
+transaction_hash = "0x713b8810f277004b85749595e1d80d4367cdc0ace96f48fbd0b0eb95af0143f"
+block_number = 3
+seed = "dojo_starter"
+name = "dojo::world::world"
+
+[world.metadata]
+profile_name = "dev"
+rpc_url = "https://api.cartridge.gg/x/nfthunt/katana/"
+
+[base]
+kind = "Class"
+class_hash = "0x22f3e55b61d86c2ac5239fa3b3b8761f26b9a5c0b5f61ddbd5d756ced498b46"
+original_class_hash = "0x22f3e55b61d86c2ac5239fa3b3b8761f26b9a5c0b5f61ddbd5d756ced498b46"
+name = "dojo::base::base"
+
+[[contracts]]
+kind = "DojoContract"
+address = "0x3610b797baec740e2fa25ae90b4a57d92b04f48a1fdbae1ae203eaf9723c1a0"
+class_hash = "0x2b9f7bc75d0c6f4860c66b5f06b835933a70c969d8638ee9cb5be284a8c0402"
+original_class_hash = "0x2b9f7bc75d0c6f4860c66b5f06b835933a70c969d8638ee9cb5be284a8c0402"
+base_class_hash = "0x22f3e55b61d86c2ac5239fa3b3b8761f26b9a5c0b5f61ddbd5d756ced498b46"
+abi = "manifests/dev/abis/deployments/contracts/dojo_starter_systems_actions_actions.json"
+reads = []
+writes = [
+    "Position",
+    "Moves",
+    "DirectionsAvailable",
+]
+computed = []
+init_calldata = []
+name = "dojo_starter::systems::actions::actions"
+
+[[contracts]]
+kind = "DojoContract"
+class_hash = "0x5f51084d8dd063666f2c171091474fcd7eafcd155a11a78947dc6a09c4c8e01"
+original_class_hash = "0x5f51084d8dd063666f2c171091474fcd7eafcd155a11a78947dc6a09c4c8e01"
+base_class_hash = "0x0"
+abi = "manifests/dev/abis/deployments/contracts/dojo_starter_token_erc20_ERC20.json"
+reads = []
+writes = []
+computed = []
+init_calldata = []
+name = "dojo_starter::token::erc20::ERC20"
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x20e4c0cb03c44bc73e2b5a3841119b8d18a650665ca5add8939d8d8720fe0a7"
+original_class_hash = "0x20e4c0cb03c44bc73e2b5a3841119b8d18a650665ca5add8939d8d8720fe0a7"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_counter_counter.json"
+name = "dojo_starter::models::counter::counter"
+
+[[models.members]]
+name = "entityId"
+type = "u32"
+key = true
+
+[[models.members]]
+name = "counter"
+type = "u32"
+key = false
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x4efa9133b013c420b19499d64957904b66f18668f6c3de670f4b437c3738609"
+original_class_hash = "0x4efa9133b013c420b19499d64957904b66f18668f6c3de670f4b437c3738609"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_game_game.json"
+name = "dojo_starter::models::game::game"
+
+[[models.members]]
+name = "player"
+type = "ContractAddress"
+key = true
+
+[[models.members]]
+name = "entityId"
+type = "u32"
+key = false
+
+[[models.members]]
+name = "status"
+type = "GameStatus"
+key = false
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x48af75d0b7fd9d4165c957d18fc12f63106bd91a306a8325cdd660358756e90"
+original_class_hash = "0x48af75d0b7fd9d4165c957d18fc12f63106bd91a306a8325cdd660358756e90"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_health_health.json"
+name = "dojo_starter::models::health::health"
+
+[[models.members]]
+name = "entityId"
+type = "ContractAddress"
+key = true
+
+[[models.members]]
+name = "gameId"
+type = "u32"
+key = true
+
+[[models.members]]
+name = "health"
+type = "u16"
+key = false
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x20ad7a1cf6e4f304df3826e11188fcdac039c281f82dd5744206155ebe03fa3"
+original_class_hash = "0x20ad7a1cf6e4f304df3826e11188fcdac039c281f82dd5744206155ebe03fa3"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_map_map_object.json"
+name = "dojo_starter::models::map::map_object"
+
+[[models.members]]
+name = "player"
+type = "ContractAddress"
+key = true
+
+[[models.members]]
+name = "position"
+type = "Position"
+key = false
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0xb0d2fa96616af5d754a4ef4c60f9bc42d53c42d72d03b5d7da900c274916a"
+original_class_hash = "0xb0d2fa96616af5d754a4ef4c60f9bc42d53c42d72d03b5d7da900c274916a"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_move_move.json"
+name = "dojo_starter::models::move::move"
+
+[[models.members]]
+name = "entityId"
+type = "ContractAddress"
+key = true
+
+[[models.members]]
+name = "gameId"
+type = "u32"
+key = true
+
+[[models.members]]
+name = "attack"
+type = "u16"
+key = false
+
+[[models.members]]
+name = "healing"
+type = "u16"
+key = false
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x494c26b7983d39395427b99412c4e56bc4b6c3f3cd39ae3b1fb89db68feb7b2"
+original_class_hash = "0x494c26b7983d39395427b99412c4e56bc4b6c3f3cd39ae3b1fb89db68feb7b2"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_player_player.json"
+name = "dojo_starter::models::player::player"
+
+[[models.members]]
+name = "player"
+type = "ContractAddress"
+key = true
+
+[[models.members]]
+name = "character"
+type = "Character"
+key = false
+
+[[models.members]]
+name = "score"
+type = "u64"
+key = false
+
+[[models.members]]
+name = "position"
+type = "Position"
+key = false
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x3ba3a7143c7e2e605eff811eff8dbf54189fe28f6505d4e148fa683b47908ad"
+original_class_hash = "0x3ba3a7143c7e2e605eff811eff8dbf54189fe28f6505d4e148fa683b47908ad"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_treasure_treasure.json"
+name = "dojo_starter::models::treasure::treasure"
+
+[[models.members]]
+name = "player"
+type = "ContractAddress"
+key = true
+
+[[models.members]]
+name = "location"
+type = "Location"
+key = false
+
+[[models.members]]
+name = "claim"
+type = "TreasureStatus"
+key = false
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x2ea91e1fe576ffdbc7194fe02ae0878f77154b519c2f4c87ef15ba721233e5b"
+original_class_hash = "0x2ea91e1fe576ffdbc7194fe02ae0878f77154b519c2f4c87ef15ba721233e5b"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_walk_directions_available.json"
+name = "dojo_starter::models::walk::directions_available"
+
+[[models.members]]
+name = "player"
+type = "ContractAddress"
+key = true
+
+[[models.members]]
+name = "directions"
+type = "Array<Direction>"
+key = false
+
+[[models]]
+kind = "DojoModel"
+class_hash = "0x7ceb5d8ed5e8b795cf17a60532691c0beccd6aae3171a482d7e34b0d61f4741"
+original_class_hash = "0x7ceb5d8ed5e8b795cf17a60532691c0beccd6aae3171a482d7e34b0d61f4741"
+abi = "manifests/dev/abis/deployments/models/dojo_starter_models_walk_walks.json"
+name = "dojo_starter::models::walk::walks"
+
+[[models.members]]
+name = "player"
+type = "ContractAddress"
+key = true
+
+[[models.members]]
+name = "remaining"
+type = "u8"
+key = false
+
+[[models.members]]
+name = "last_direction"
+type = "Direction"
+key = false
+
+[[models.members]]
+name = "can_move"
+type = "bool"
+key = false
